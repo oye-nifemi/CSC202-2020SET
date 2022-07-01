@@ -9,3 +9,12 @@ services:
       - C:/Users/user/Desktop/CSC202-2020SET/csc2020:/data/postgres
     env_file: 
       - csc2020.env
+
+  web:
+    container_name: nginx-csc2020
+    build:
+      context: .
+      dockerfile: nginx-primer/Dockerfile
+    ports:
+     - 80:80
+     - 443:443
